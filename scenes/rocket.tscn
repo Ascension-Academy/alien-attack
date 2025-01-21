@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciblq6okvq7gc"]
+[gd_scene load_steps=4 format=3 uid="uid://ciblq6okvq7gc"]
 
+[ext_resource type="Script" path="res://scripts/rocket.gd" id="1_c7lmp"]
 [ext_resource type="Texture2D" uid="uid://dg1tvmtciso1h" path="res://assets/textures/rocket.png" id="1_swxu0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a1ucs"]
@@ -7,6 +8,7 @@ radius = 13.0
 height = 64.0
 
 [node name="Rocket" type="Area2D"]
+script = ExtResource("1_c7lmp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
@@ -16,3 +18,7 @@ texture = ExtResource("1_swxu0")
 position = Vector2(2, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_a1ucs")
+
+[node name="VisibleNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-25.5, -3)
+scale = Vector2(0.85, 1)
